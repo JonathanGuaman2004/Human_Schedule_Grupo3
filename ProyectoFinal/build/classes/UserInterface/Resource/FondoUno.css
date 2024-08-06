@@ -1,0 +1,339 @@
+
+/* Estilo para el ToggleButton */
+.button1 {
+    -fx-background-color: linear-gradient(#2b6abd22, #138fde),
+                          radial-gradient(center 50% 75%, radius 100%, rgba(15, 125, 204, 0.5), rgba(255, 255, 255, 0));
+    -fx-background-radius: 10;
+    -fx-background-insets: 0,1;
+    
+    -fx-font-family: "Alagard";
+    -fx-font-size: 20px;
+    -fx-text-fill: #ffffff99;
+    -fx-border-color: #010e59;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 4, 0.5, 0, 0);
+}
+
+.button1:focused {
+    -fx-background-color: linear-gradient(#64d392, #1390de42),
+    radial-gradient(center 50% 75%, radius 100%, rgba(15, 125, 204, 0.5), rgba(255, 255, 255, 0));
+    -fx-text-fill: #ffffff;       /* Cambia el color del texto a blanco cuando está enfocado */
+}
+
+.button1:hover {
+    -fx-background-color:   linear-gradient(#37f7f7, #378df7),
+                            radial-gradient(center 50% 0%, radius 100%, rgba(15, 62, 204, 0.5), rgba(255,255,255,0));
+    -fx-text-fill: #3ff4a3;
+}
+
+.button1:armed {
+    -fx-background-color:   linear-gradient(#d1f737, #37f751),
+                            radial-gradient(center 50% 0%, radius 100%, rgba(52, 152, 219,1), rgb(44, 255, 209));
+    -fx-background-radius: 0;
+    -fx-background-insets: 0,1;
+    
+    -fx-text-fill: #000000;
+    -fx-border-radius: 0;
+    -fx-cursor: wait;
+}
+
+.button1:selected {
+    -fx-background-color: radial-gradient(center 0% 50%, radius 50%, rgb(145, 255, 149), rgb(0, 255, 204));
+    -fx-background-radius: 10;
+    -fx-background-insets: 0,1;
+    
+    -fx-text-fill: #0066FF;
+    -fx-border-radius: 0;
+    -fx-cursor: hand;
+}
+
+.button1:selected:hover {
+    -fx-background-color:   linear-gradient(#f98866, #ffd4e7, #9791ff),
+                            radial-gradient(center 50% 100%, radius 50%, rgba(249, 136, 102), rgb(255, 208, 120));
+}
+
+.button1:selected:pressed {
+    -fx-background-color:   linear-gradient(#d1f737, #37f751),
+                            radial-gradient(center 100% 50%, radius 100%, rgba(52, 152, 219,1), rgb(47, 252, 208));
+    -fx-background-radius: 0;
+    -fx-background-insets: 0,1;
+    
+    -fx-text-fill: #000000;
+    -fx-border-radius: 0;
+    -fx-cursor: wait;
+}
+
+.cuadroprincipal {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #3b86ff80, #36b9fb80);
+    -fx-border-color: #005b96;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+/*titulo*/
+.textoUno{
+    -fx-text-fill: #4da1e1;
+    -fx-font-family: "Over There";
+    -fx-font-size: 28px;
+}
+
+.panelTitulo{
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #34495eb0, #316893af);
+    -fx-background-radius: 0 0 60 0;
+}
+
+
+/* Estilo para el BotonSalida */
+.buttonSalida {
+    -fx-background-color: linear-gradient(#8d66cf89, #5013de49),
+                          radial-gradient(center 50% 75%, radius 100%, rgba(173, 15, 204, 0), rgba(255, 255, 255, 0));
+    -fx-background-radius: 10;
+    -fx-background-insets: 0,1;
+    
+    -fx-font-family: "Vanilla Cake";
+    -fx-font-size: 22px;
+    -fx-text-fill: #fdfefe99;
+    -fx-border-color: #17b4d77d;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 4, 0.5, 0, 0);
+}
+
+.buttonSalida:hover {
+    -fx-background-color:   linear-gradient(#ffab2c87, #ffc42383),
+                            radial-gradient(center 50% 0%, radius 100%, #ffffff9e, #ffa7ff93);
+    -fx-text-fill: #ff2c73;
+}
+
+.buttonSalida:armed {
+    -fx-background-color:   linear-gradient(#5013de, #8d66cf),
+                            radial-gradient(center 50% 0%, radius 100%, rgba(141, 102, 207,1), rgb(80, 19, 222));
+    -fx-background-radius: 0;
+    -fx-background-insets: 0,1;
+    
+    -fx-text-fill: #ff5353;
+    -fx-border-radius: 0;
+    -fx-cursor: wait;
+}
+.buttonSalida:focused {
+    -fx-background-color:   linear-gradient(#5013decf, #8d66cfc5),
+                            radial-gradient(center 50% 75%, radius 100%, rgba(15, 125, 204, 0.5), rgba(255, 255, 255, 0));
+    -fx-text-fill: #ffffff;       /* Cambia el color del texto a blanco cuando está enfocado */
+}
+
+.panelContrasena{
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #343c5eb0, #333193af);
+    -fx-background-radius: 60;
+}
+
+.txtUno{
+    -fx-background-radius: 60;
+    -fx-font-family: "Britannic Bold";
+    -fx-font-size: 22px;
+    -fx-text-fill: #8bffff;
+}
+
+.txtDos{
+    -fx-background-radius: 60;
+    -fx-font-family: "Britannic Bold";
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+}
+
+.txtTres{
+    -fx-background-radius: 60;
+    -fx-font-family: "Britannic Bold";
+    -fx-font-size: 18px;
+    -fx-text-fill: #ffffff;
+}
+
+.textField{
+    -fx-background-color:   linear-gradient(#9377d6f9, #a289cec5),
+                            radial-gradient(center 50% 75%, radius 100%, rgba(15, 125, 204, 0.5), rgba(255, 255, 255, 0));
+    -fx-background-radius: 60;
+    -fx-font-family: "Gumi Font Symbols";
+    -fx-font-size: 22px;
+    -fx-text-fill: #fdfefe99;
+}
+.textField:hover{
+    -fx-background-color:   linear-gradient(#fffffff9, #ffffffc5),
+                            radial-gradient(center 50% 75%, radius 100%, rgba(15, 125, 204, 0.5), rgba(255, 255, 255, 0));
+    -fx-background-radius: 60;
+    -fx-font-family: "Gumi Font Symbols";
+    -fx-font-size: 22px;
+    -fx-text-fill: #1900ffd5;
+}
+
+.botonComboBox{
+    -fx-background-color:   linear-gradient(#5013decf, #8d66cfc5),
+                            radial-gradient(center 50% 75%, radius 100%, rgba(15, 125, 204, 0.5), rgba(255, 255, 255, 0));
+    -fx-background-radius: 60;
+    -fx-font-family: "Vanilla Cake";
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffffd8;
+    -fx-cursor: hand;
+}
+.botonComboBox:focused {
+    -fx-background-color: linear-gradient(#64d392, #1390de42),
+    radial-gradient(center 50% 75%, radius 100%, rgba(15, 125, 204, 0.5), rgba(255, 255, 255, 0));
+    -fx-text-fill: #ffffff;       /* Cambia el color del texto a blanco cuando está enfocado */
+}
+
+.botonComboBox:hover {
+    -fx-background-color:   linear-gradient(#37f7f7, #378df7),
+                            radial-gradient(center 50% 0%, radius 100%, rgba(15, 62, 204, 0.5), rgba(255,255,255,0));
+    -fx-text-fill: #3ff4a3;
+}
+
+.botonComboBox:armed {
+    -fx-background-color:   linear-gradient(#d1f737, #37f751),
+                            radial-gradient(center 50% 0%, radius 100%, rgba(52, 152, 219,1), rgb(44, 255, 209));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1;
+    
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 0;
+    -fx-cursor: wait;
+}
+.botonContinuar{
+    -fx-background-color:   linear-gradient(#5013decf, #8d66cfc5),
+                            radial-gradient(center 50% 75%, radius 100%, rgba(15, 125, 204, 0.5), rgba(255, 255, 255, 0));
+    -fx-background-radius: 60;
+    -fx-font-family: "Vanilla Cake";
+    -fx-font-size: 22px;
+    -fx-text-fill: #fdfefe99;
+    -fx-cursor: hand;
+}
+.botonContinuar:focused {
+    -fx-background-color: linear-gradient(#64d392, #1390de42),
+    radial-gradient(center 50% 75%, radius 100%, rgba(15, 125, 204, 0.5), rgba(255, 255, 255, 0));
+    -fx-text-fill: #ffffff;       /* Cambia el color del texto a blanco cuando está enfocado */
+}
+
+.botonContinuar:hover {
+    -fx-background-color:   linear-gradient(#37f7f7, #378df7),
+                            radial-gradient(center 50% 0%, radius 100%, rgba(15, 62, 204, 0.5), rgba(255,255,255,0));
+    -fx-text-fill: #3ff4a3;
+}
+
+.botonContinuar:armed {
+    -fx-background-color:   linear-gradient(#d1f737, #37f751),
+                            radial-gradient(center 50% 0%, radius 100%, rgba(52, 152, 219,1), rgb(44, 255, 209));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1;
+    
+    -fx-text-fill: #000000;
+    -fx-border-radius: 0;
+    -fx-cursor: wait;
+}
+
+.panelRegistroEmpleados{
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #343c5eb0, #333193af);
+    -fx-background-radius: 60;
+}
+
+.textFieldCodigoBarras{
+    -fx-background-color:   linear-gradient(#77d4d6f9, #89ceb0c5),
+                            radial-gradient(center 50% 75%, radius 100%, #ffffff00, #0fcc6e69);
+    -fx-background-radius: 10 30 30 10;
+    -fx-font-family: "Code 128";
+    -fx-font-size: 32px;
+    -fx-text-fill: #fdfefe99;
+}
+.textFieldCodigoBarras:hover{
+    -fx-background-color:   linear-gradient(#fffffff9, #ffffffc5),
+                            radial-gradient(center 50% 75%, radius 100%, #ffffff00, #0fcccc80);
+    -fx-background-radius: 10 30 30 10;
+    -fx-font-family: "Code 128";
+    -fx-font-size: 32px;
+    -fx-text-fill: #336666;
+}
+
+.textFieldCodigoBarras:focused {
+    -fx-background-color:   linear-gradient(#4dde13cf, #66cf80c5),
+                            radial-gradient(center 50% 75%, radius 100%, #4793c980, #ffffff00);
+    -fx-text-fill: #ffffff;       /* Cambia el color del texto a blanco cuando está enfocado */
+}
+
+.textFieldNormal{
+    -fx-background-color:   linear-gradient(#1dc8b480, #27cacdf9),
+                            radial-gradient(center 50% 75%, radius 100%, #ffffff00, #0fc9cc69);
+    -fx-background-radius: 60;
+    -fx-font-family: "Lemon Shake Shake";
+    -fx-font-size: 14px;
+    -fx-text-fill: #c8ff7599;
+}
+.textFieldNormal:hover{
+    -fx-background-color:   linear-gradient(#fffffff9, #85ff93c5),
+                            radial-gradient(center 50% 75%, radius 100%, #ffffff00, #0fcc7180);
+    -fx-background-radius: 60;
+    -fx-font-family: "Lemon Shake Shake";
+    -fx-font-size: 14px;
+    -fx-text-fill: #336666;
+}
+
+.textFieldNormal:focused {
+    -fx-background-color:   linear-gradient(#7f13decf, #b766cfc5),
+                            radial-gradient(center 50% 75%, radius 100%, #0f7dcc80, #ffffff00);
+    -fx-text-fill: #ffffff;       /* Cambia el color del texto a blanco cuando está enfocado */
+}
+
+/* Estilo para el contenedor del RadioButton */
+.botonRadio {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff; /* Color del texto */
+}
+
+.botonRadio:selected {
+    -fx-background-color: #ff8408, #00d9ffc9;
+    -fx-background-radius: 60;
+    -fx-border-radius: 60;
+    -fx-border-width: 2px;
+    -fx-text-fill: #5025ff;
+}
+
+/* Estilo para el círculo del RadioButton cuando no está seleccionado */
+.botonRadio .radio {
+    -fx-background-color: #ffcccc, white;
+    -fx-background-radius: 60;
+    -fx-border-radius: 60;
+    -fx-border-color: #cc0000;
+    -fx-border-width: 2px;
+}
+
+/* Estilo para el círculo del RadioButton cuando está seleccionado */
+.botonRadio:selected .radio {
+    -fx-background-color: #cc0000, #00d9ff;
+    -fx-background-radius: 60;
+    -fx-border-radius: 60;
+    -fx-background-insets: 0, 1;
+    -fx-border-color: #00FF00;
+    -fx-border-width: 2px;
+}
+
+.botonRadio:hover {
+    -fx-background-color:   linear-gradient(#37f7f7, #378df7),
+                            radial-gradient(center 50% 0%, radius 100%, rgba(15, 62, 204, 0.5), rgba(255,255,255,0));
+    -fx-text-fill: #3ff4a3;
+    -fx-background-radius: 20;
+    -fx-border-radius: 60;
+    -fx-background-insets: 0, 1;
+    -fx-padding: 3;
+}
+
+.botonRadio:focused {
+    -fx-background-color:   linear-gradient(#5013decf, #8d66cfc5),
+                            radial-gradient(center 50% 75%, radius 100%, rgba(15, 125, 204, 0.5), rgba(255, 255, 255, 0));
+    -fx-text-fill: #ffffff;       /* Cambia el color del texto a blanco cuando está enfocado */
+    -fx-background-radius: 20;
+    -fx-border-radius: 60;
+    -fx-background-insets: 0, 1;
+    -fx-padding: 3;
+    
+}
+
+.panelImportante{
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #345e4db0, #333193af);
+    -fx-background-radius: 20;
+}

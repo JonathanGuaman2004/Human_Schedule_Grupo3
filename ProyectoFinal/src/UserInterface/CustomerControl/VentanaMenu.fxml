@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserInterface.Form.VentanaMenuController">
+   <children>
+      <ImageView fitHeight="780.0" fitWidth="1200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resource/Image/Fondo.jpg" />
+         </image>
+      </ImageView>
+      <BorderPane fx:id="anchorPanePrincipal" prefHeight="750.0" prefWidth="1200.0">
+         <top>
+            <Pane prefHeight="162.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutY="-8.0" prefHeight="44.0" prefWidth="1200.0" style="-fx-background-color: #D0D3D4;">
+                     <children>
+                        <Label fx:id="laberlFechasActual" layoutX="18.0" layoutY="18.0" prefHeight="17.0" prefWidth="526.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="37.0" layoutY="60.0" prefHeight="83.0" prefWidth="639.0" styleClass="panelTitulo" stylesheets="@../Resource/FondoUno.css">
+                     <children>
+                        <Label alignment="BASELINE_CENTER" contentDisplay="TOP" layoutX="80.0" layoutY="-2.0" prefHeight="77.0" prefWidth="535.0" styleClass="textoUno" stylesheets="@../Resource/FondoUno.css" text="&lt;Secutiry Craft&gt;" textAlignment="CENTER" />
+                        <Button fx:id="botonInicio" layoutY="2.0" mnemonicParsing="false" onAction="#acBotonInicio" prefHeight="80.0" prefWidth="67.0" textAlignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" scaleY="1.2" scaleZ="1.2">
+                                 <image>
+                                    <Image url="@../Resource/Image/Logo.jpeg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="683.0" layoutY="48.0" prefHeight="96.0" prefWidth="507.0">
+                     <children>
+                        <Label fx:id="laberlFracesMotivadores" layoutX="43.0" layoutY="24.0" prefHeight="51.0" prefWidth="430.0" />
+                     </children>
+                  </Pane>
+               </children></Pane>
+         </top>
+         <left>
+            <Pane prefHeight="679.0" prefWidth="322.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="9.0" layoutY="42.0" prefHeight="231.0" prefWidth="293.0" spacing="10.0" styleClass="cuadroprincipal" stylesheets="@../Resource/FondoUno.css">
+                     <children>
+                        <Pane prefHeight="10.0" prefWidth="305.0" />
+                        <ToggleButton fx:id="botonRegistro" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#acBotonRegistro" prefHeight="40.0" prefWidth="280.0" styleClass="button1" stylesheets="@../Resource/FondoUno.css" text="Registro de Empleados">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resource/Icon/Download%20Resume_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="PrincipalButtons" />
+                           </toggleGroup>
+                        </ToggleButton>
+                        <ToggleButton fx:id="botonIngresoSalida" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#acBotonIngresoSalida" prefHeight="40.0" prefWidth="280.0" styleClass="button1" stylesheets="@../Resource/FondoUno.css" text="Ingreso y Salida" toggleGroup="$PrincipalButtons">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resource/Icon/User%20Clock_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton fx:id="botonCalculoRemuneracion" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#acBotonCalculoRemuneracion" prefHeight="40.0" prefWidth="280.0" styleClass="button1" stylesheets="@../Resource/FondoUno.css" text="Cálculo Remuneración" toggleGroup="$PrincipalButtons">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resource/Icon/Get%20Cash.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                     </children>
+                  </VBox>
+                  <Button alignment="BASELINE_LEFT" layoutX="26.0" layoutY="505.0" mnemonicParsing="false" onAction="#terminarAplicacion" prefHeight="60.0" prefWidth="130.0" styleClass="buttonSalida" stylesheets="@../Resource/FondoUno.css" text="SALIR">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Resource/Icon/Cancel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

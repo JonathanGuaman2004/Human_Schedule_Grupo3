@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="588.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserInterface.Form.RegistroTrabajadorController">
+   <children>
+      <StackPane prefHeight="588.0" prefWidth="873.0">
+         <children>
+            <Pane fx:id="panelResgistroPersonas" prefHeight="503.0" prefWidth="881.0">
+               <children>
+                  <BorderPane layoutY="17.0" prefHeight="555.0" prefWidth="873.0" styleClass="panelRegistroEmpleados" stylesheets="@../Resource/FondoUno.css">
+                     <top>
+                        <Pane prefHeight="123.0" prefWidth="874.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label layoutX="50.0" layoutY="14.0" styleClass="txtUno" text="► Ingrese el Codigo de Barras" />
+                              <TextField fx:id="textFieldCodigoBarras" layoutX="50.0" layoutY="46.0" prefHeight="57.0" prefWidth="160.0" styleClass="textFieldCodigoBarras" />
+                              <Button layoutX="219.0" layoutY="51.0" mnemonicParsing="false" onAction="#acBuscar" styleClass="botonContinuar" text="Buscar" />
+                              <Label layoutX="497.0" layoutY="17.0" styleClass="txtTres" text="► Horario" />
+                              <Label layoutX="689.0" layoutY="17.0" styleClass="txtTres" text="► Mes de Vacación" />
+                              <TextField fx:id="textFieldSeleccionVacaciones" editable="false" layoutX="672.0" layoutY="41.0" prefHeight="29.0" prefWidth="178.0" styleClass="textFieldNormal" />
+                              <TextField fx:id="textFieldSeleccionHorario" editable="false" layoutX="448.0" layoutY="41.0" prefHeight="29.0" prefWidth="189.0" styleClass="textFieldNormal" />
+                              <Label alignment="CENTER" layoutX="455.0" layoutY="73.0" prefHeight="22.0" prefWidth="387.0" styleClass="txtDos" text="El horario y mes de vacación son dados aleatoriamente" />
+                              <Button layoutX="322.0" layoutY="50.0" mnemonicParsing="false" onAction="#acLimpiarConsola" styleClass="botonContinuar" text="Limpiar" />
+                           </children>
+                        </Pane>
+                     </top>
+                     <right>
+                        <Pane prefHeight="302.0" prefWidth="462.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <BorderPane layoutX="275.0" layoutY="11.0" prefHeight="94.0" prefWidth="168.0" styleClass="panelImportante">
+                                 <center>
+                                    <VBox prefHeight="126.0" prefWidth="142.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Pane prefHeight="3.0" prefWidth="142.0" />
+                                          <Label styleClass="txtDos" text="► Decimo Tercero" />
+                                          <RadioButton fx:id="btnDecTerMensualizado" mnemonicParsing="false" prefHeight="23.0" prefWidth="134.0" selected="true" styleClass="botonRadio" text="Mensualizado">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="DecimoTercer" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="btnDecTerAnual" mnemonicParsing="false" styleClass="botonRadio" text="Anual" toggleGroup="$DecimoTercer" />
+                                       </children>
+                                    </VBox>
+                                 </center>
+                                 <left>
+                                    <Pane prefHeight="212.0" prefWidth="25.0" BorderPane.alignment="CENTER" />
+                                 </left>
+                              </BorderPane>
+                              <Label fx:id="infoRegistro" alignment="CENTER_RIGHT" layoutX="-393.0" layoutY="314.0" prefHeight="22.0" prefWidth="819.0" styleClass="txtTres" text="Label" />
+                              <BorderPane layoutX="104.0" layoutY="240.0" prefHeight="64.0" prefWidth="255.0" styleClass="panelImportante">
+                                 <center>
+                                    <Pane prefHeight="118.0" prefWidth="255.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="102.0" layoutY="8.0" styleClass="txtDos" text="► Estado" />
+                                          <RadioButton fx:id="btnEstActivo" layoutX="14.0" layoutY="30.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="90.0" selected="true" styleClass="botonRadio" text="Activo">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="Estado" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="btnEstNoActivo" layoutX="135.0" layoutY="30.0" mnemonicParsing="false" styleClass="botonRadio" text="No Activo" toggleGroup="$Estado" />
+                                       </children>
+                                    </Pane>
+                                 </center>
+                              </BorderPane>
+                              <Label layoutX="45.0" layoutY="14.0" styleClass="txtDos" text="► Número de Celular" />
+                              <Label layoutX="41.0" layoutY="66.0" styleClass="txtDos" text="► Número de Telefono" />
+                              <TextField fx:id="textFieldNumeroCelular" layoutX="28.0" layoutY="29.0" prefHeight="8.0" prefWidth="158.0" styleClass="textFieldNormal" />
+                              <TextField fx:id="textFieldNumeroTelefono" layoutX="29.0" layoutY="82.0" prefHeight="8.0" prefWidth="158.0" styleClass="textFieldNormal" />
+                              <BorderPane layoutX="6.0" layoutY="124.0" prefHeight="96.0" prefWidth="245.0" styleClass="panelImportante">
+                                 <center>
+                                    <Pane prefHeight="118.0" prefWidth="255.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="102.0" layoutY="8.0" styleClass="txtDos" text="► Genero" />
+                                          <RadioButton fx:id="btnGenMasculino" layoutX="8.0" layoutY="32.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="113.0" selected="true" styleClass="botonRadio" text="Masculino">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="Genero" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="btnGenFemenino" layoutX="139.0" layoutY="32.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="101.0" styleClass="botonRadio" text="Femenino" toggleGroup="$Genero" />
+                                          <RadioButton fx:id="btnGenOtro" layoutX="90.0" layoutY="62.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="70.0" styleClass="botonRadio" text="Otro" toggleGroup="$Genero" />
+                                       </children>
+                                    </Pane>
+                                 </center>
+                              </BorderPane>
+                              <BorderPane layoutX="275.0" layoutY="123.0" prefHeight="99.0" prefWidth="168.0" styleClass="panelImportante">
+                                 <left>
+                                    <Pane prefHeight="212.0" prefWidth="25.0" BorderPane.alignment="CENTER" />
+                                 </left>
+                                 <center>
+                                    <VBox prefHeight="103.0" prefWidth="168.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Pane prefHeight="3.0" prefWidth="142.0" />
+                                          <Label styleClass="txtDos" text="► Decimo Cuarto" />
+                                          <RadioButton fx:id="btnDecCuarMensualizado" mnemonicParsing="false" prefHeight="23.0" prefWidth="135.0" selected="true" styleClass="botonRadio" text="Mensualizado">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="DecimoCuarto" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="btnDecCuarAnual" mnemonicParsing="false" styleClass="botonRadio" text="Anual" toggleGroup="$DecimoCuarto" />
+                                       </children>
+                                    </VBox>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </Pane>
+                     </right>
+                     <center>
+                        <BorderPane prefHeight="314.0" prefWidth="386.0" BorderPane.alignment="CENTER">
+                           <left>
+                              <Pane prefHeight="346.0" prefWidth="24.0" BorderPane.alignment="CENTER" />
+                           </left>
+                           <center>
+                              <VBox prefHeight="302.0" prefWidth="339.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Pane prefHeight="10.0" prefWidth="430.0" />
+                                    <Label styleClass="txtDos" text="► Nombres" />
+                                    <Pane prefHeight="39.0" prefWidth="410.0">
+                                       <children>
+                                          <TextField fx:id="textFieldPrimerNombre" layoutY="-1.0" prefHeight="29.0" prefWidth="168.0" styleClass="textFieldNormal" />
+                                          <TextField fx:id="textFieldSegundoNombre" layoutX="182.0" layoutY="-1.0" prefHeight="29.0" prefWidth="168.0" styleClass="textFieldNormal" />
+                                       </children>
+                                    </Pane>
+                                    <Label styleClass="txtDos" text="► Apellidos" />
+                                    <Pane prefHeight="39.0" prefWidth="410.0">
+                                       <children>
+                                          <TextField fx:id="textFieldPrimerApellido" layoutY="-1.0" prefHeight="29.0" prefWidth="168.0" styleClass="textFieldNormal" />
+                                          <TextField fx:id="textFieldSegundoApellido" layoutX="182.0" prefHeight="29.0" prefWidth="168.0" styleClass="textFieldNormal" />
+                                       </children>
+                                    </Pane>
+                                    <Label prefHeight="16.0" prefWidth="249.0" styleClass="txtDos" text="► Número de cédula               ►Edad" />
+                                    <Pane prefHeight="39.0" prefWidth="410.0">
+                                       <children>
+                                          <TextField fx:id="textFieldNumeroCedula" prefHeight="29.0" prefWidth="171.0" styleClass="textFieldNormal" />
+                                          <TextField fx:id="textFieldEdad" layoutX="188.0" layoutY="1.0" prefHeight="29.0" prefWidth="162.0" styleClass="textFieldNormal" />
+                                       </children>
+                                    </Pane>
+                                    <Label styleClass="txtDos" text="► Correo electrónico" />
+                                    <Pane prefHeight="39.0" prefWidth="410.0">
+                                       <children>
+                                          <TextField fx:id="textFieldCorreoElec" layoutY="5.0" prefHeight="29.0" prefWidth="350.0" styleClass="textFieldNormal" />
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="15.0" prefWidth="214.0" />
+                                    <Label styleClass="txtDos" text="► Ingrese el valor de su sueldo" />
+                                    <Pane prefHeight="42.0" prefWidth="410.0">
+                                       <children>
+                                          <TextField fx:id="textFieldSueldo" prefHeight="8.0" prefWidth="158.0" styleClass="textFieldNormal" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                     </center>
+                     <bottom>
+                        <Pane prefHeight="86.0" prefWidth="874.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" layoutX="8.0" layoutY="14.0" prefHeight="22.0" prefWidth="314.0" styleClass="txtDos" text="Se requiere colocar el codigo de barras de un" />
+                              <Label alignment="CENTER" layoutX="8.0" layoutY="37.0" prefHeight="22.0" prefWidth="312.0" styleClass="txtDos" text="superior para continuar con el proceso" />
+                              <TextField fx:id="textFieldCodigoBarrasCRUD" layoutX="313.0" layoutY="9.0" prefHeight="57.0" prefWidth="141.0" styleClass="textFieldCodigoBarras" />
+                              <Button layoutX="461.0" layoutY="13.0" mnemonicParsing="false" onAction="#acRegistro" styleClass="botonContinuar" text="Registrar" />
+                              <Button layoutX="599.0" layoutY="14.0" mnemonicParsing="false" onAction="#acModificar" styleClass="botonContinuar" text="Modificar" />
+                              <Button layoutX="734.0" layoutY="9.0" mnemonicParsing="false" onAction="#acEliminar" styleClass="buttonSalida" text="Eliminar" />
+                           </children>
+                        </Pane>
+                     </bottom>
+                  </BorderPane>
+               </children>
+            </Pane>
+            <Pane fx:id="paneContrasena" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Pane layoutX="96.0" layoutY="122.0" prefHeight="264.0" prefWidth="681.0" styleClass="panelContrasena" stylesheets="@../Resource/FondoUno.css">
+                     <children>
+                        <Label layoutX="60.0" layoutY="26.0" styleClass="txtUno" text="Esta ingresando a las bases de REGISTRO DE EMPLEADOS" />
+                        <Label alignment="CENTER" layoutX="195.0" layoutY="69.0" styleClass="txtTres" text="Por favor ingrese la Clave de Acceso" />
+                        <TextField fx:id="entradaContrasena" layoutX="155.0" layoutY="109.0" prefHeight="46.0" prefWidth="371.0" styleClass="textField" />
+                        <Button layoutX="470.0" layoutY="187.0" mnemonicParsing="false" onAction="#aceptarONo" styleClass="botonContinuar" text="Continuar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resource/Icon/Forward.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label fx:id="infoContrasena" layoutX="60.0" layoutY="206.0" styleClass="txtDos" text="Laber" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserInterface.Form.RegistroEntradaSalidaController">
+   <children>
+      <Pane prefHeight="503.0" prefWidth="881.0">
+         <children>
+            <Pane layoutX="195.0" layoutY="27.0" prefHeight="450.0" prefWidth="491.0" styleClass="panelContrasena" stylesheets="@../Resource/FondoUno.css">
+               <children>
+                  <VBox alignment="CENTER" layoutX="6.0" layoutY="11.0" prefHeight="428.0" prefWidth="474.0" spacing="6.0">
+                     <children>
+                        <Label styleClass="txtUno" text="Acerque su codigo de barras" />
+                        <Pane prefHeight="13.0" prefWidth="580.0" />
+                        <Pane prefHeight="66.0" prefWidth="374.0">
+                           <children>
+                              <TextField fx:id="txtFieldIngresoCodigoBarras" layoutX="167.0" layoutY="5.0" styleClass="textFieldCodigoBarras" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="25.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="labelInfor" alignment="CENTER" layoutX="17.0" prefHeight="26.0" prefWidth="440.0" styleClass="txtDos" text="Entrada" />
+                           </children></Pane>
+                        <Button fx:id="btnEntradaYSalida" mnemonicParsing="false" onAction="#acRegistrarEntrada" styleClass="botonContinuar" text="Registrarse" />
+                        <Pane prefHeight="39.0" prefWidth="384.0">
+                           <children>
+                              <Label layoutX="194.0" layoutY="7.0" prefHeight="26.0" prefWidth="86.0" styleClass="txtDos" text="El trabajador " />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="25.0" prefWidth="100.0">
+                           <children>
+                              <TextField fx:id="txtFieldNombresyapellidos" editable="false" layoutX="36.0" layoutY="-2.0" prefHeight="29.0" prefWidth="402.0" styleClass="textFieldNormal" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="39.0" prefWidth="384.0">
+                           <children>
+                              <Label layoutX="85.0" layoutY="7.0" prefHeight="26.0" prefWidth="166.0" styleClass="txtDos" text="ha sido registrado a las" />
+                              <TextField fx:id="txtFieldHoras" editable="false" layoutX="265.0" layoutY="6.0" prefHeight="29.0" prefWidth="86.0" styleClass="textFieldNormal" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="39.0" prefWidth="384.0">
+                           <children>
+                              <Label layoutX="41.0" layoutY="6.0" prefHeight="26.0" prefWidth="34.0" styleClass="txtDos" text="el día" />
+                              <TextField fx:id="txtFieldDia" editable="false" layoutX="83.0" layoutY="6.0" prefHeight="29.0" prefWidth="146.0" styleClass="textFieldNormal" />
+                              <Label layoutX="237.0" layoutY="7.0" prefHeight="26.0" prefWidth="60.0" styleClass="txtDos" text="del mes" />
+                              <TextField fx:id="txtFieldMes" editable="false" layoutX="297.0" layoutY="6.0" prefHeight="29.0" prefWidth="140.0" styleClass="textFieldNormal" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
