@@ -6,27 +6,28 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
-
 import DataAccess.IDAO;
 import DataAccess.SQLiteDataHelper;
 import DataAccess.DTO.RegistroEmpleado_DTO;
 import DataAccess.DTO.SistemaSeguimientoYAsistencia_DTO;
 import FrameWork.GroupThreeException;
 import javafx.scene.control.Label;
+
+/**
+ * La clase SistemaSeguimientoYAsistencia_DAO sera la clase mediante el cual podemos acceder a la base de datos, posee los ¨query¨ que mandarla las ordenes del CRUD a la base de datos de los empleados que asistieron en forma diaria
+ */
 public class SistemaSeguimientoYAsistencia_DAO extends SQLiteDataHelper implements IDAO<SistemaSeguimientoYAsistencia_DTO>{
     
     @Override
     public boolean create(SistemaSeguimientoYAsistencia_DTO entity, Label info) throws Exception {
         String query = "INSERT INTO RegistroDiario "
-        /*1*/ +"(IDPersonas"
-        /*2*/ +",HoraEntrada"
-        /*3*/ +",MinutoEntrada"
-        ///*4*/ +",HoraSalida"
-        ///*5*/ +",MinutoSalida"
-        /*6*/ +",NumeroDia"
-        /*7*/ +",NumeroMes"
-        /*8*/ +",NumeroAnio"
-        /*9*/+",EstadoEnt) VALUES (?,?,?,?,?,?,?)";//hasta aqui bien
+                        +"(IDPersonas"
+                        +",HoraEntrada"
+                        +",MinutoEntrada"
+                        +",NumeroDia"
+                        +",NumeroMes"
+                        +",NumeroAnio"
+                        +",EstadoEnt) VALUES (?,?,?,?,?,?,?)";
         RegistroEmpleado_DTO entityDos;
         RegistroEmpleado_DAO entityTres=new RegistroEmpleado_DAO();
         entityDos=entityTres.readBy(entity.getiDPersonas(), info);
@@ -34,15 +35,13 @@ public class SistemaSeguimientoYAsistencia_DAO extends SQLiteDataHelper implemen
             try {
                 Connection conn = openConnection();
                 PreparedStatement pstmt = conn.prepareStatement(query);
-                /*1*/ pstmt.setInt(1,entity.getiDPersonas());
-                /*2*/ pstmt.setInt(2,entity.getHoraAlMomento());
-                /*3*/ pstmt.setInt(3,entity.getMinutoAlMomento());
-                ///*4*/ pstmt.setInt(4,entity.getHoraSalida());
-                ///*5*/ pstmt.setInt(5,entity.getMinutoSalida());
-                /*6*/ pstmt.setInt(4,entity.getNumeroDia());
-                /*7*/ pstmt.setInt(5,entity.getNumeroMes());
-                /*8*/ pstmt.setInt(6,entity.getNumeroAnio());
-                /*9*/ pstmt.setString(7,entity.getEstadoEntrada(entityDos.getiDHorario()));
+                    pstmt.setInt(1,entity.getiDPersonas());
+                    pstmt.setInt(2,entity.getHoraAlMomento());
+                    pstmt.setInt(3,entity.getMinutoAlMomento());
+                    pstmt.setInt(4,entity.getNumeroDia());
+                    pstmt.setInt(5,entity.getNumeroMes());
+                    pstmt.setInt(6,entity.getNumeroAnio());
+                    pstmt.setString(7,entity.getEstadoEntrada(entityDos.getiDHorario()));
                 pstmt.executeUpdate();
                 return true;
             } catch (SQLException e) {
@@ -55,6 +54,15 @@ public class SistemaSeguimientoYAsistencia_DAO extends SQLiteDataHelper implemen
         }
     }
     
+    /**
+     * este metodo permitira buscar a cierta persona de acuerdo ail, dia, mes, anio
+     * @param id: ide de la persona
+     * @param dia: el dia actual
+     * @param mes: mes actual
+     * @param info: es el label donde se mostrara la informacion respecto a la busqueda del registro
+     * @return retorna un objeto de tipo SistemaSeguimientoYAsistencia_DTO que permitira obserbar sus datos
+     * @throws Exception: En caso de haber errores, se lanzará esta excepcion que indicará el error o el problema de su ejecucion
+     */
     public SistemaSeguimientoYAsistencia_DTO readByDiaMes(int id,Integer dia,Integer mes, Label info) throws Exception {
         SistemaSeguimientoYAsistencia_DTO rE = new SistemaSeguimientoYAsistencia_DTO();
         String query = "SELECT "
@@ -77,7 +85,6 @@ public class SistemaSeguimientoYAsistencia_DAO extends SQLiteDataHelper implemen
                   , rs.getInt(3)
                   , rs.getInt(4));
             }
-            
         } catch (SQLException e) {
         }
         return rE;
@@ -86,25 +93,24 @@ public class SistemaSeguimientoYAsistencia_DAO extends SQLiteDataHelper implemen
     @Override
     public boolean update(SistemaSeguimientoYAsistencia_DTO entity, Label info) throws Exception {
         String query = "UPDATE RegistroDiario SET "
-                        +"HoraSalida        = ?"/*1*/
-                        +",MinutoSalida     = ?"/*2*/
-                        +",EstadoSal        = ?"/*3*/
-                        +" WHERE IDPersonas = ?"/*4*/
-                        +"AND NumeroDia     = ?"/*5*/
-                        +"AND NumeroMes     = ?";/*6*/
-                        //+"AND HoraSalida    = NULL"/*7*/;
+                        +"HoraSalida        = ?"
+                        +",MinutoSalida     = ?"
+                        +",EstadoSal        = ?"
+                        +" WHERE IDPersonas = ?"
+                        +"AND NumeroDia     = ?"
+                        +"AND NumeroMes     = ?";
         RegistroEmpleado_DAO entityTres=new RegistroEmpleado_DAO();
         RegistroEmpleado_DTO entityDos = entityTres.readBy(entity.getiDPersonas(), info);
         if (entityDos.getEstado().equals("A")){
             try {
                 Connection conn = openConnection();
                 PreparedStatement pstmt = conn.prepareStatement(query);
-                /*1*/ pstmt.setInt(1,entity.getHoraAlMomento());
-                /*2*/ pstmt.setInt(2,entity.getMinutoAlMomento());
-                /*3*/ pstmt.setString(3,entity.getEstadoSalida(entityDos.getiDHorario()));
-                /*4*/ pstmt.setInt(4,entity.getiDPersonas());
-                /*5*/ pstmt.setInt(5,entity.getNumeroDia());
-                /*6*/ pstmt.setInt(6,entity.getNumeroMes());
+                    pstmt.setInt(1,entity.getHoraAlMomento());
+                    pstmt.setInt(2,entity.getMinutoAlMomento());
+                    pstmt.setString(3,entity.getEstadoSalida(entityDos.getiDHorario()));
+                    pstmt.setInt(4,entity.getiDPersonas());
+                    pstmt.setInt(5,entity.getNumeroDia());
+                    pstmt.setInt(6,entity.getNumeroMes());
                 pstmt.executeUpdate();
                 return true;
             }catch (SQLException e){
@@ -116,21 +122,16 @@ public class SistemaSeguimientoYAsistencia_DAO extends SQLiteDataHelper implemen
     
     @Override
     public boolean delete(SistemaSeguimientoYAsistencia_DTO entity, Label info) throws Exception {
-        
         throw new UnsupportedOperationException("Unimplemented method 'delete'");
     }
     
-    
-    
     @Override
     public List<SistemaSeguimientoYAsistencia_DTO> readAll() throws Exception {
-        
         throw new UnsupportedOperationException("Unimplemented method 'readAll'");
     }
 
     @Override
     public SistemaSeguimientoYAsistencia_DTO readBy(int id, Label info) throws Exception {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'readBy'");
     }
 }

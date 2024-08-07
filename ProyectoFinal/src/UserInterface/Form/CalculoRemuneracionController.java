@@ -1,20 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package UserInterface.Form;
 
 import java.net.URL;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.ResourceBundle;
-
 import Business.BusinessLogic.RegistroEmpleadoBL;
 import Business.BusinessLogic.SistemaControlAccesoBL;
-import DataAccess.DAO.SistemaControlAcceso_DAO;
-import DataAccess.DAO.SistemaSeguimientoYAsistencia_DAO;
 import DataAccess.DTO.RegistroEmpleado_DTO;
 import DataAccess.DTO.SistemaControlAcceso_DTO;
 import DataAccess.DTO.SistemaSeguimientoYAsistencia_DTO;
@@ -22,7 +12,6 @@ import FrameWork.GroupThreeException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;

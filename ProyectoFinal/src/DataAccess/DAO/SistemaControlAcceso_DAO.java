@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
-
 import DataAccess.IDAO;
 import DataAccess.SQLiteDataHelper;
 import DataAccess.DTO.RegistroEmpleado_DTO;
@@ -15,28 +14,30 @@ import DataAccess.DTO.SistemaSeguimientoYAsistencia_DTO;
 import FrameWork.GroupThreeException;
 import javafx.scene.control.Label;
 
+/**
+ * La clase SistemaControlAcceso_DAO sera la clase mediante el cual podemos acceder a la base de datos, posee los ¨query¨ que mandarla las ordenes del CRUD a la base de datos de los empleados que asistieron en forma mensual
+ */
 public class SistemaControlAcceso_DAO extends SQLiteDataHelper implements IDAO<SistemaControlAcceso_DTO>{
 
     @Override
     public List<SistemaControlAcceso_DTO> readAll() throws Exception {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'readAll'");
     }
 
     @Override
     public boolean create(SistemaControlAcceso_DTO entity, Label info) throws Exception {
         String query = "INSERT INTO RegistroMensual "
-        /*1*/ +"(IDPersonas"
-        /*2*/ +",NumeroMes"
-        /*3*/ +",NumeroAnio"
-        /*4*/ +",NumeroAtrasos"
-        /*5*/ +",NumeroSalidaAntes"
-        /*6*/ +",HorasFaltantes"
-        /*7*/ +",HorasExtra"
-        /*8*/ +",HorasExtraOrdinarias"
-        /*9*/ +",DecimoTercerS"
-       /*10*/ +",DecimoCuartoS"
-       /*11*/ +",NumeroHorasLaborables) VALUES (?,?,?,?,?,?,?,?,?,?,?)";//hasta aqui bien
+                        +"(IDPersonas"
+                        +",NumeroMes"
+                        +",NumeroAnio"
+                        +",NumeroAtrasos"
+                        +",NumeroSalidaAntes"
+                        +",HorasFaltantes"
+                        +",HorasExtra"
+                        +",HorasExtraOrdinarias"
+                        +",DecimoTercerS"
+                        +",DecimoCuartoS"
+                        +",NumeroHorasLaborables) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
         RegistroEmpleado_DTO entityDos;
         RegistroEmpleado_DAO entityTres=new RegistroEmpleado_DAO();
         SistemaSeguimientoYAsistencia_DTO entityCuatro = new SistemaSeguimientoYAsistencia_DTO();
@@ -47,18 +48,18 @@ public class SistemaControlAcceso_DAO extends SQLiteDataHelper implements IDAO<S
             try {
                 Connection conn = openConnection();
                 PreparedStatement pstmt = conn.prepareStatement(query);
-                /*1*/ pstmt.setInt(1,entity.getiDPersonas());
-                /*2*/ pstmt.setInt(2,entity.getNumeroMes());
-                /*3*/ pstmt.setInt(3,entity.getNumeroAnio());
-                /*4*/ pstmt.setInt(4,entity.getNumeroAtrasos(entityCuatro,entityDos.getiDHorario()));//asdadasd
-                /*5*/ pstmt.setInt(5,entity.getNumeroSalidaAntes(entityCuatro,entityDos.getiDHorario()));
-                /*5*/ pstmt.setInt(6,entity.getHorasFaltantes(entityCuatro,entityDos.getiDHorario()));
-                /*6*/ pstmt.setInt(7,entity.getHorasExtra(entityCuatro,entityDos.getiDHorario()));
-                /*7*/ pstmt.setInt(8,entity.getHorasExtraOrdinariasNull());
-                /*8*/ pstmt.setString(9,entityDos.getPagoDecimoTercero());
-                /*9*/ pstmt.setString(10,entityDos.getPagoDecimoCuarto());
-               /*10*/ pstmt.setInt(11,entity.getNumeroHorasLaborables(entity.getNumeroAnio(),entity.getNumeroMes())-9+entity.getHorasFaltantes(entityCuatro,entityDos.getiDHorario()));
-                pstmt.executeUpdate();
+                    pstmt.setInt(1,entity.getiDPersonas());
+                    pstmt.setInt(2,entity.getNumeroMes());
+                    pstmt.setInt(3,entity.getNumeroAnio());
+                    pstmt.setInt(4,entity.getNumeroAtrasos(entityCuatro,entityDos.getiDHorario()));
+                    pstmt.setInt(5,entity.getNumeroSalidaAntes(entityCuatro,entityDos.getiDHorario()));
+                    pstmt.setInt(6,entity.getHorasFaltantes(entityCuatro,entityDos.getiDHorario()));
+                    pstmt.setInt(7,entity.getHorasExtra(entityCuatro,entityDos.getiDHorario()));
+                    pstmt.setInt(8,entity.getHorasExtraOrdinariasNull());
+                    pstmt.setString(9,entityDos.getPagoDecimoTercero());
+                    pstmt.setString(10,entityDos.getPagoDecimoCuarto());
+                    pstmt.setInt(11,entity.getNumeroHorasLaborables(entity.getNumeroAnio(),entity.getNumeroMes())-9+entity.getHorasFaltantes(entityCuatro,entityDos.getiDHorario()));
+                    pstmt.executeUpdate();
                 return true;
             } catch (Exception e) {
                 return false;
@@ -68,6 +69,15 @@ public class SistemaControlAcceso_DAO extends SQLiteDataHelper implements IDAO<S
         }
     }
     
+    /**
+     * Este metodo es una variante del metodo readBy el caul tambien se utiliza para buscar datos en la base de datos, sin embargo añandiendo el id, el mes, el anio
+     * @param id: id de la persona a buscar
+     * @param mes: mes en el que buscar
+     * @param anio: anio en el que buscar
+     * @param info: es el label donde se mostrara la informacion respecto a la busqueda del registro
+     * @return: retornara un objeto de tipo SistemaControlAcceso_DTO que permitira despues poder mostrar los datos obtenidos de la busqueda
+     * @throws Exception: En caso de haber errores, se lanzará esta excepcion que indicará el error o el problema de su ejecucion
+     */
     public SistemaControlAcceso_DTO readByIdMesAnio(int id,int mes, int anio, Label info) throws Exception {
         SistemaControlAcceso_DTO rE = new SistemaControlAcceso_DTO();
         String query = "SELECT "
@@ -94,7 +104,6 @@ public class SistemaControlAcceso_DAO extends SQLiteDataHelper implements IDAO<S
                   , rs.getInt(5)
                   , rs.getInt(6));
             }
-            
         } catch (SQLException e) {
             throw new GroupThreeException(e.getMessage(),getClass().getName(),"readByIdMesAnios()");
         }
@@ -136,20 +145,15 @@ public class SistemaControlAcceso_DAO extends SQLiteDataHelper implements IDAO<S
             }catch (SQLException e){
                 throw new GroupThreeException(e.getMessage(),getClass().getName(),"create()");
             }
-        //throw new UnsupportedOperationException("Unimplemented method 'update'");
     }
 
     @Override
     public boolean delete(SistemaControlAcceso_DTO entity, Label info) throws Exception {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'delete'");
     }
 
     @Override
     public SistemaControlAcceso_DTO readBy(int id, Label info) throws Exception {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'readBy'");
     }
-
-
 }

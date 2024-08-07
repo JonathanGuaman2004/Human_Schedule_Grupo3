@@ -4,6 +4,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 
+/**
+ * La clase RegistroEmpleado_DTO sera la clase mediante el cual podemos crear los objetos junto con sus datos que se necesitaran despues para subir a la base de datos
+ */
 public class RegistroEmpleado_DTO {
     
     private Integer iDPersonas;
@@ -28,34 +31,82 @@ public class RegistroEmpleado_DTO {
     private Integer iDHorario;
     private Double  sueldo;
     
+    /**
+     * Constructor Vacio
+     */
+    public RegistroEmpleado_DTO() {
+    }
+
+    /**
+     * ConstructorUno
+     * @param iDPersonas: iDPersonas
+     * @param iDPersonaTipo: iDPersonaTipo
+     * @param nombre: nombre
+     * @param segundoNombre: segundoNombre
+     * @param apellido: apellido
+     * @param segundoApellido: segundoApellido
+     * @param cedula: cedula
+     * @param edad: edad
+     * @param iDGenero: iDGenero
+     * @param correo: correo
+     * @param celular: celular
+     * @param telefono: telefono
+     * @param estado: estado
+     * @param pagoDecimoTercero: pagoDecimoTercero
+     * @param pagoDecimoCuarto: pagoDecimoCuarto
+     * @param iDMesVacacion: iDMesVacacion
+     * @param modificador: modificador
+     * @param iDHorario: iDHorario
+     * @param sueldo: sueldo
+     */
     public RegistroEmpleado_DTO(Integer iDPersonas, Integer iDPersonaTipo, String nombre, String segundoNombre,
             String apellido, String segundoApellido, String cedula, Integer edad, Integer iDGenero, String correo,
             String celular, String telefono, String estado, String pagoDecimoTercero, String pagoDecimoCuarto,
             Integer iDMesVacacion, Integer modificador, Integer iDHorario,Double  sueldo) {
-        /*1*/   this.iDPersonas = iDPersonas;
-        /*2*/   this.iDPersonaTipo = iDPersonaTipo;
-        /*3*/   this.nombre = nombre;
-        /*4*/   this.segundoNombre = segundoNombre;
-        /*5*/   this.apellido = apellido;
-        /*6*/   this.segundoApellido = segundoApellido;
-        /*7*/   this.cedula = cedula;
-        /*8*/   this.edad = edad;
-        /*9*/   this.iDGenero = iDGenero;
-        /*10*/  this.correo = correo;
-        /*11*/  this.celular = celular;
-        /*12*/  this.telefono = telefono;
-        /*13*/  this.estado = estado;
-        /*14*/  this.pagoDecimoTercero = pagoDecimoTercero;
-        /*15*/  this.pagoDecimoCuarto = pagoDecimoCuarto;
-        /*16*/  this.iDMesVacacion = iDMesVacacion;
-        /*17*/  this.modificador = modificador;
-        /*18*/  this.iDHorario = iDHorario;
-        /*19*/  this.sueldo=sueldo;
+                this.iDPersonas = iDPersonas;
+                this.iDPersonaTipo = iDPersonaTipo;
+                this.nombre = nombre;
+                this.segundoNombre = segundoNombre;
+                this.apellido = apellido;
+                this.segundoApellido = segundoApellido;
+                this.cedula = cedula;
+                this.edad = edad;
+                this.iDGenero = iDGenero;
+                this.correo = correo;
+                this.celular = celular;
+                this.telefono = telefono;
+                this.estado = estado;
+                this.pagoDecimoTercero = pagoDecimoTercero;
+                this.pagoDecimoCuarto = pagoDecimoCuarto;
+                this.iDMesVacacion = iDMesVacacion;
+                this.modificador = modificador;
+                this.iDHorario = iDHorario;
+                this.sueldo=sueldo;
     }
-
-    public RegistroEmpleado_DTO() {
-    }
-
+    
+    /**
+     * ConstructorDos
+     * @param iDPersonas: iDPersonas
+     * @param iDPersonaTipo: iDPersonaTipo
+     * @param nombre: nombre
+     * @param segundoNombre: segundoNombre
+     * @param apellido: apellido
+     * @param segundoApellido: segundoApellido
+     * @param cedula: cedula
+     * @param edad: edad
+     * @param iDGenero: iDGenero
+     * @param correo: correo
+     * @param celular: celular
+     * @param telefono: telefono
+     * @param estado: estado
+     * @param pagoDecimoTercero: pagoDecimoTercero
+     * @param pagoDecimoCuarto: pagoDecimoCuarto
+     * @param iDMesVacacion: iDMesVacacion
+     * @param fechaModificacion: fechaModificacion
+     * @param modificador: modificador
+     * @param iDHorario: iDHorario
+     * @param sueldo: sueldo
+     */
     public RegistroEmpleado_DTO(Integer iDPersonas, Integer iDPersonaTipo, String nombre, String segundoNombre,
             String apellido, String segundoApellido, String cedula, Integer edad, Integer iDGenero, String correo,
             String celular, String telefono, String estado, String pagoDecimoTercero, String pagoDecimoCuarto,
@@ -82,6 +133,25 @@ public class RegistroEmpleado_DTO {
         this.sueldo=sueldo;
     }
 
+    /**
+     * ConstructorTres
+     * @param nombre: nombre
+     * @param segundoNombre: segundoNombre
+     * @param apellido: apellido
+     * @param segundoApellido: segundoApellido
+     * @param cedula: cedula
+     * @param edad: edad
+     * @param iDGenero: iDGenero
+     * @param correo: correo
+     * @param celular: celular
+     * @param telefono: telefono
+     * @param estado: estado
+     * @param pagoDecimoTercero: pagoDecimoTercero
+     * @param pagoDecimoCuarto: pagoDecimoCuarto
+     * @param iDMesVacacion: iDMesVacacion
+     * @param iDHorario: iDHorario
+     * @param sueldo: sueldo
+     */
     public RegistroEmpleado_DTO(String nombre, String segundoNombre, String apellido, String segundoApellido,
             String cedula, Integer edad, Integer iDGenero, String correo, String celular, String telefono,
             String estado, String pagoDecimoTercero, String pagoDecimoCuarto, Integer iDMesVacacion, Integer iDHorario,
@@ -128,47 +198,72 @@ public class RegistroEmpleado_DTO {
         + "\n IDHorario:" + getiDHorario();
     }
 
+    /**
+     * Obtiene el valor del sueldo
+     * @return: retorna el valor del sueldo
+     */
     public Double getSueldo() {
         return sueldo;
     }
 
-    public void setSueldo(Double sueldo) {
-        this.sueldo = sueldo;
-    }
-
+    /**
+     * Este metodo permite verificar  si el elemento colocado en una barra de usuario si es funcional para su registro
+     * @param cBarras: codigo de barras
+     * @return: retorna un entero que indica si se puede usar o no
+     */
     public int verificarBarraUsuario(String cBarras){
         if(cBarras.length() == 6){
             try {
                 Integer.parseInt(cBarras);
                 if((((Integer.parseInt(cBarras.substring(0,1)))+(Integer.parseInt(cBarras.substring(1,2)))+(Integer.parseInt(cBarras.substring(2,3)))+(Integer.parseInt(cBarras.substring(3,4)))-(Integer.parseInt(cBarras.substring(4,5)))-(Integer.parseInt(cBarras.substring(5,6))))==1)){
-                    return 0; // solo si es un administrador
+                    return 0;
                 }else if((((Integer.parseInt(cBarras.substring(0,1)))+(Integer.parseInt(cBarras.substring(1,2)))+(Integer.parseInt(cBarras.substring(2,3)))+(Integer.parseInt(cBarras.substring(3,4)))+(Integer.parseInt(cBarras.substring(4,5)))+(Integer.parseInt(cBarras.substring(5,6))))==24)){
-                    return 1; // solo si es un empleado
+                    return 1;
                 }
-                return 4; // solo si no coincide con ninguna descripcion
+                return 4;
             } catch (Exception e) {
-                return 2; // solo si no es un numero
+                return 2;
             }
         }
-        return 3;//solo si no tiene el tamano de 6
+        return 3;
     }
 
+    /**
+     * Este metodo analiza los casos que pueden existir ene l momento de ingresar los datos a la consola
+     * @param iDPersonasCBarras: iDPersonasCBarras
+     * @param iDPersonaTipo: iDPersonaTipo
+     * @param nombre: nombre
+     * @param segundoNombre: segundoNombre
+     * @param apellido: apellido
+     * @param segundoApellido: segundoApellido
+     * @param cedula: cedula
+     * @param edad: edad
+     * @param correo: correo
+     * @param celular: celular
+     * @param telefono: telefono
+     * @param iDMesVacacion: iDMesVacacion
+     * @param modificador: modificador
+     * @param iDHorario: iDHorario
+     * @param sueldo: sueldo
+     * @param label: label
+     * @return: retorna un booleano que indica si puede proseguir o no
+     */
     public Boolean verificarCasos(TextField iDPersonasCBarras
-    ,int iDPersonaTipo
-    ,TextField nombre
-    ,TextField segundoNombre
-    ,TextField apellido
-    ,TextField segundoApellido
-    ,TextField cedula
-    ,TextField edad
-    ,TextField correo
-    ,TextField celular
-    ,TextField telefono
-    ,TextField iDMesVacacion
-    ,TextField modificador
-    ,TextField iDHorario
-    ,TextField sueldo
-    ,Label label){
+        ,int iDPersonaTipo
+        ,TextField nombre
+        ,TextField segundoNombre
+        ,TextField apellido
+        ,TextField segundoApellido
+        ,TextField cedula
+        ,TextField edad
+        ,TextField correo
+        ,TextField celular
+        ,TextField telefono
+        ,TextField iDMesVacacion
+        ,TextField modificador
+        ,TextField iDHorario
+        ,TextField sueldo
+        ,Label label){
         if (verificarBarraUsuario(iDPersonasCBarras.getText())!=0&&(verificarBarraUsuario(iDPersonasCBarras.getText())!=1)){
             if(verificarBarraUsuario(iDPersonasCBarras.getText())==3){
                 label.setText("Utilice el Lector de codigo de barras");
@@ -177,17 +272,16 @@ public class RegistroEmpleado_DTO {
             else {
                 label.setText("Utilice un codigo de barras que se admita");
                 label.setStyle("-fx-text-fill: #E53935");
-            }//no proseguir <2 solo si no es un numero>,<3 solo si no tiene el tamano de 6>, <4 solo si no coincide con ninguna descripcion>
+            }
         }else{
-            if (nombre.getText().isEmpty()||/*segundoNombre.getText().isEmpty()
-            ||*/apellido.getText().isEmpty()||/*segundoApellido.getText().isEmpty()
-            ||*/cedula.getText().isEmpty()||edad.getText().isEmpty()
+            if (nombre.getText().isEmpty()||apellido.getText().isEmpty()
+            ||cedula.getText().isEmpty()||edad.getText().isEmpty()
             ||correo.getText().isEmpty()||celular.getText().isEmpty()
             ||telefono.getText().isEmpty()||iDMesVacacion.getText().isEmpty()
             ||modificador.getText().isEmpty()||iDHorario.getText().isEmpty()
             ||sueldo.getText().isEmpty()){
                 label.setText("Termine de llenar todos los campos!");
-                label.setStyle("-fx-text-fill: #E53935"); // solo si no tiene ningun campo lleno
+                label.setStyle("-fx-text-fill: #E53935");
             }else{
                 try {
                     Long.parseLong(cedula.getText());
@@ -196,7 +290,7 @@ public class RegistroEmpleado_DTO {
                             double valorSueldo = Double.parseDouble(sueldo.getText());
                             if(valorSueldo>2000||valorSueldo<500){
                                 label.setText("Su sueldo no puede ser menor a 500 o mayor a 2000");
-                                label.setStyle("-fx-text-fill: #E53935");// solo si el sueldo no esta entre 500 y 2000
+                                label.setStyle("-fx-text-fill: #E53935");
                             }else{
                                 try {
                                     int valorEdad = Integer.parseInt(edad.getText());
@@ -213,7 +307,7 @@ public class RegistroEmpleado_DTO {
                                                     label.setStyle("-fx-text-fill: #E53935");
                                                 }else{
                                                     label.setText("");
-                                                    return true;// si todo esta correcto
+                                                    return true;
                                                 }
                                             }else{
                                                 label.setText("El celular debe tener 10 digitos");
@@ -230,22 +324,27 @@ public class RegistroEmpleado_DTO {
                                 }
                             }
                         } catch (Exception e) {
-                            label.setText("Si usa decimales usar unpuntos (.)");
-                            label.setStyle("-fx-text-fill: #E53935");// solo si el sueldo no es un numero
+                            label.setText("Si usa decimales usar puntos (.)");
+                            label.setStyle("-fx-text-fill: #E53935");
                         }
                     }else{
                         label.setText("Son 10 dígitos en el campo de la CEDULA");
-                        label.setStyle("-fx-text-fill: #E53935");// solo si no tiene el tamano de 10 la cedula
+                        label.setStyle("-fx-text-fill: #E53935");
                     }
                 } catch (Exception e) {
                     label.setText("Asegurece de llenar correctamente la cedula (sin espacios o signos)");
-                    label.setStyle("-fx-text-fill: #E53935");// el numero de cedula no son numeros
+                    label.setStyle("-fx-text-fill: #E53935");
                 }
             }
         }
         return false;
     }
 
+    /**
+     * este metodo genera un numero aleatorio para la asignacion de horarios
+     * @param horario: es el TextField donde se colocará el horario
+     * @return: retorna un entero que es el horario que se le asigno
+     */
     public int getRandomAsignacionHorario(TextField horario) {
         int randomHorario = 9 + (int) (Math.random() * 2);
         if(randomHorario == 9){
@@ -256,6 +355,11 @@ public class RegistroEmpleado_DTO {
         return randomHorario;
     }
 
+    /**
+     * este metodo genera un numero aleatorio para la asignacion de vacaciones
+     * @param vacaciones: es el TextField donde se colocará el mes de vacaciones
+     * @return: retorna un entero que es el mes de vacacion que se le asigno
+     */
     public int getRandomAsignacionVacaciones(TextField vacaciones) {
         int randomVaca = 6 + (int) (Math.random() * 3);
         
@@ -269,6 +373,12 @@ public class RegistroEmpleado_DTO {
         return randomVaca;
     }
     
+    /**
+     * Este metodo indica el numero que corresponde al genero seleccionado
+     * @param masculino: boton
+     * @param femenino: boton
+     * @return retorna un numero de acuerdo al genero seleccionado
+     */
     public int seleccionarGenero (RadioButton masculino,RadioButton femenino){
         if(masculino.isSelected()){
             return 1;
@@ -278,6 +388,11 @@ public class RegistroEmpleado_DTO {
         return 3;
     }
 
+    /**
+     * Este metodo indica el String que corresponde al estado seleccionado
+     * @param activo: boton
+     * @return: retona el string de acuerdo al estado
+     */
     public String seleccionarEstado (RadioButton activo){
         if(activo.isSelected()){
             return "A";
@@ -285,6 +400,11 @@ public class RegistroEmpleado_DTO {
         return "X";
     }
 
+    /**
+     * Este metodo indica el String que corresponde al tipo de forma de recibir el decimo tercero
+     * @param mensual: boton
+     * @return: retorna un string de acuerdo al tipo de forma de recibir el decimo tercero
+     */
     public String seleccionarDecimoTercero (RadioButton mensual){
         if(mensual.isSelected()){
             return "M";
@@ -292,6 +412,11 @@ public class RegistroEmpleado_DTO {
         return "A";
     }
 
+    /**
+     * Este metodo indica el String que corresponde al tipo de forma de recibir el decimo cuarto
+     * @param mensual: boton
+     * @return: retorna un string de acuerdo al tipo de forma de recibir el decimo cuarto
+     */
     public String seleccionarDecimoCuarto (RadioButton mensual){
         if(mensual.isSelected()){
             return "M";
@@ -299,6 +424,14 @@ public class RegistroEmpleado_DTO {
         return "A";
     }
 
+    /**
+     * este metodo se usa para colocar los botones de la manera adecuada en una busqueda
+     * @param botonUno: boton
+     * @param botonDos: boton
+     * @param obtenido: el valor que ingresa de la persona
+     * @param comparado: el valor que se compara
+     * @param diferente: el valor que es diferente
+     */
     public void devolverDosBtn(RadioButton botonUno,RadioButton botonDos,String obtenido,String comparado,String diferente){
         if(obtenido.toString().equals(comparado)){
             botonUno.setSelected(true);
@@ -307,6 +440,13 @@ public class RegistroEmpleado_DTO {
         }
     }
 
+    /**
+     * este metodo se usa para colocar los botones de la manera adecuada en una busqueda
+     * @param botonUno: boton
+     * @param botonDos: boton
+     * @param botonTres: boton
+     * @param obtenido: el valor que ingresa
+     */
     public void devolverTresBtn(RadioButton botonUno, RadioButton botonDos,RadioButton botonTres, Integer obtenido){
         if(obtenido==1){
             botonUno.setSelected(true);
@@ -317,6 +457,11 @@ public class RegistroEmpleado_DTO {
         }
     }
 
+    /**
+     * metodo que digita el horario asignado
+     * @param val: valor que ingresa
+     * @param txtfl: TextField que se muestra
+     */
     public void devolverTextoHorario(Integer val,TextField txtfl){
         if(val==9){
             txtfl.setText("Manana (7:00 - 16:00)");
@@ -325,6 +470,11 @@ public class RegistroEmpleado_DTO {
         }
     }
 
+    /**
+     * Este metodo indica el mes asignado
+     * @param val: valor que ingresa
+     * @param txtfl: TextField que se muestra
+     */
     public void devolverTextoMesVaca(Integer val,TextField txtfl){
         if(val==6){
             txtfl.setText("Agosto");
@@ -335,164 +485,164 @@ public class RegistroEmpleado_DTO {
         }
     }
 
+    /**
+     * Obtiene el valor del iDPersonas
+     * @return: retorna el valor del iDPersonas
+     */
     public Integer getiDPersonas() {
         return iDPersonas;
     }
 
-    public void setiDPersonas(Integer iDPersonas) {
-        this.iDPersonas = iDPersonas;
-    }
-
+    /**
+     * Obtiene el valor del iDPersonaTipo
+     * @return: retorna el valor del iDPersonaTipo
+     */
     public Integer getiDPersonaTipo() {
         return iDPersonaTipo;
     }
 
-    public void setiDPersonaTipo(Integer iDPersonaTipo) {
-        this.iDPersonaTipo = iDPersonaTipo;
-    }
-
+    /**
+     * Obtiene el valor del nombre
+     * @return: retorna el valor del nombre
+     */
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
+    /**
+     * Obtiene el valor del segundoNombre
+     * @return: retorna el valor del segundoNombre
+     */
     public String getSegundoNombre() {
         return segundoNombre;
     }
 
-    public void setSegundoNombre(String segundoNombre) {
-        this.segundoNombre = segundoNombre;
-    }
-
+    /**
+     * Obtiene el valor del apellido
+     * @return: retorna el valor del apellido
+     */
     public String getApellido() {
         return apellido;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
+    /**
+     * Obtiene el valor del segundoApellido
+     * @return: retorna el valor del segundoApellido
+     */
     public String getSegundoApellido() {
         return segundoApellido;
     }
 
-    public void setSegundoApellido(String segundoApellido) {
-        this.segundoApellido = segundoApellido;
-    }
-
+    /**
+     * Obtiene el valor de la cedula
+     * @return: retorna el valor de la cedula
+     */
     public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-
+    /**
+     * Obtiene el valor de la edad
+     * @return: retorna el valor de la edad
+     */
     public Integer getEdad() {
         return edad;
     }
 
-    public void setEdad(Integer edad) {
-        this.edad = edad;
-    }
-
+    /**
+     * Obtiene el valor del iDGenero
+     * @return: retorna el valor del iDGenero
+     */
     public Integer getiDGenero() {
         return iDGenero;
     }
 
-    public void setiDGenero(Integer iDGenero) {
-        this.iDGenero = iDGenero;
-    }
-
+    /**
+     * Obtiene el valor del correo
+     * @return: retorna el valor del correo
+     */
     public String getCorreo() {
         return correo;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
+    /**
+     * Obtiene el valor del celular
+     * @return: retorna el valor del celular
+     */
     public String getCelular() {
         return celular;
     }
 
-    public void setCelular(String celular) {
-        this.celular = celular;
-    }
-
+    /**
+     * Obtiene el valor del telefono
+     * @return: retorna el valor del telefono
+     */
     public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
+    /**
+     * Obtiene el valor del estado
+     * @return: retorna el valor del estado
+     */
     public String getEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
+    /**
+     * Obtiene el valor del pagoDecimoTercero
+     * @return: retorna el valor del pagoDecimoTercero
+     */
     public String getPagoDecimoTercero() {
         return pagoDecimoTercero;
     }
 
-    public void setPagoDecimoTercero(String pagoDecimoTercero) {
-        this.pagoDecimoTercero = pagoDecimoTercero;
-    }
-
+    /**
+     * Obtiene el valor del pagoDecimoCuarto
+     * @return: retorna el valor del pagoDecimoCuarto
+     */
     public String getPagoDecimoCuarto() {
         return pagoDecimoCuarto;
     }
 
-    public void setPagoDecimoCuarto(String pagoDecimoCuarto) {
-        this.pagoDecimoCuarto = pagoDecimoCuarto;
-    }
-
+    /**
+     * Obtiene el valor del iDMesVacacion
+     * @return: retorna el valor del iDMesVacacion
+     */
     public Integer getiDMesVacacion() {
         return iDMesVacacion;
     }
 
-    public void setiDMesVacacion(Integer iDMesVacacion) {
-        this.iDMesVacacion = iDMesVacacion;
-    }
-
+    /**
+     * Obtiene el valor de la fechaCreacion
+     * @return: retorna el valor de la fechaCreacion
+     */
     public String getFechaCreacion() {
         return fechaCreacion;
     }
 
-    public void setFechaCreacion(String fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
-    }
-
+    /**
+     * Obtiene el valor de la fechaModificacion
+     * @return: retorna el valor de la fechaModificacion
+     */
     public String getFechaModificacion() {
         return fechaModificacion;
     }
 
-    public void setFechaModificacion(String fechaModificacion) {
-        this.fechaModificacion = fechaModificacion;
-    }
-
+    /**
+     * Obtiene el valor del modificador
+     * @return: retorna el valor del modificador
+     */
     public Integer getModificador() {
         return modificador;
     }
 
-    public void setModificador(Integer modificador) {
-        this.modificador = modificador;
-    }
-
+    /**
+     * Obtiene el valor del iDHorario
+     * @return: retorna el valor del iDHorario
+     */
     public Integer getiDHorario() {
         return iDHorario;
-    }
-
-    public void setiDHorario(Integer iDHorario) {
-        this.iDHorario = iDHorario;
     }
 }
 
