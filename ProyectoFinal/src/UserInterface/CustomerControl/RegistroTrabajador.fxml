@@ -17,7 +17,7 @@
    <children>
       <StackPane prefHeight="588.0" prefWidth="873.0">
          <children>
-            <Pane fx:id="panelResgistroPersonas" prefHeight="503.0" prefWidth="881.0">
+            <Pane fx:id="panelResgistroPersonas" prefHeight="503.0" prefWidth="881.0" visible="false">
                <children>
                   <BorderPane layoutY="17.0" prefHeight="555.0" prefWidth="873.0" styleClass="panelRegistroEmpleados" stylesheets="@../Resource/FondoUno.css">
                      <top>
@@ -178,7 +178,7 @@
                   </BorderPane>
                </children>
             </Pane>
-            <Pane fx:id="paneContrasena" prefHeight="200.0" prefWidth="200.0" visible="false">
+            <Pane fx:id="paneContrasena" prefHeight="200.0" prefWidth="200.0">
                <children>
                   <Pane layoutX="96.0" layoutY="122.0" prefHeight="264.0" prefWidth="681.0" styleClass="panelContrasena" stylesheets="@../Resource/FondoUno.css">
                      <children>
@@ -194,7 +194,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label fx:id="infoContrasena" layoutX="60.0" layoutY="206.0" styleClass="txtDos" text="Laber" />
+                        <Label fx:id="infoContrasena" layoutX="60.0" layoutY="206.0" styleClass="txtDos" />
                      </children>
                   </Pane>
                </children>

@@ -75,25 +75,73 @@ VALUES  (1, 1, 1),       -- New year (Lunes)
 
 INSERT INTO RegistroMensual
 (IDPersonas    ,NumeroMes  ,NumeroAnio   ,NumeroAtrasos ,NumeroSalidaAntes   ,HorasFaltantes    ,HorasExtra ,HorasExtraOrdinarias    ,DecimoTercerS  ,DecimoCuartoS    ,NumeroHorasLaborables)VALUES
-(100909        ,1          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"A"            ,"M"              ,8),
-(100909        ,2          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"A"            ,"M"              ,8),
-(100909        ,3          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"A"            ,"M"              ,8),
-(100909        ,4          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"A"            ,"M"              ,8),
-(100909        ,5          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"A"            ,"M"              ,8),
-(100909        ,6          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"A"            ,"M"              ,8),
-(100909        ,7          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"A"            ,"M"              ,8),
-(100909        ,8          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"A"            ,"M"              ,8)
+(100909        ,1          ,2024         ,5             ,1                   ,4                 ,6          ,6                       ,"A"            ,"M"              ,8),
+(100909        ,2          ,2024         ,0             ,1                   ,4                 ,6          ,6                       ,"A"            ,"M"              ,8),
+(100909        ,3          ,2024         ,0             ,1                   ,4                 ,0          ,0                       ,"A"            ,"M"              ,8),
+(100909        ,4          ,2024         ,0             ,1                   ,4                 ,0          ,0                       ,"A"            ,"M"              ,8),
+(100909        ,5          ,2024         ,0             ,1                   ,4                 ,0          ,0                       ,"A"            ,"M"              ,8),
+(100909        ,6          ,2024         ,0             ,1                   ,4                 ,0          ,0                       ,"A"            ,"M"              ,8),
+(100909        ,7          ,2024         ,0             ,1                   ,4                 ,0          ,0                       ,"A"            ,"M"              ,8),
+(100909        ,8          ,2024         ,0             ,1                   ,4                 ,0          ,0                       ,"A"            ,"M"              ,8)
+;
+
+INSERT INTO RegistroMensual
+(IDPersonas    ,NumeroMes  ,NumeroAnio   ,NumeroAtrasos ,NumeroSalidaAntes   ,HorasFaltantes    ,HorasExtra ,HorasExtraOrdinarias    ,DecimoTercerS  ,DecimoCuartoS    ,NumeroHorasLaborables)VALUES
+(101809        ,1          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(101809        ,2          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(101809        ,3          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(101809        ,4          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(101809        ,5          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(101809        ,6          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(101809        ,7          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(101809        ,8          ,2024         ,5             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8)
+;
+
+INSERT INTO RegistroMensual
+(IDPersonas    ,NumeroMes  ,NumeroAnio   ,NumeroAtrasos ,NumeroSalidaAntes   ,HorasFaltantes    ,HorasExtra ,HorasExtraOrdinarias    ,DecimoTercerS  ,DecimoCuartoS    ,NumeroHorasLaborables)VALUES
+(105409        ,1          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(105409        ,2          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(105409        ,3          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(105409        ,4          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(105409        ,5          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(105409        ,6          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(105409        ,7          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(105409        ,8          ,2024         ,5             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8)
+;
+
+
+INSERT INTO RegistroMensual
+(IDPersonas    ,NumeroMes  ,NumeroAnio   ,NumeroAtrasos ,NumeroSalidaAntes   ,HorasFaltantes    ,HorasExtra ,HorasExtraOrdinarias    ,DecimoTercerS  ,DecimoCuartoS    ,NumeroHorasLaborables)VALUES
+(102709        ,1          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(102709        ,2          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(102709        ,3          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(102709        ,4          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(102709        ,5          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(102709        ,6          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(102709        ,7          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(102709        ,8          ,2024         ,5             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8)
 ;
 INSERT INTO RegistroMensual
 (IDPersonas    ,NumeroMes  ,NumeroAnio   ,NumeroAtrasos ,NumeroSalidaAntes   ,HorasFaltantes    ,HorasExtra ,HorasExtraOrdinarias    ,DecimoTercerS  ,DecimoCuartoS    ,NumeroHorasLaborables)VALUES
-(101809        ,1          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"M"            ,"A"              ,8),
-(101809        ,2          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"M"            ,"A"              ,8),
-(101809        ,3          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"M"            ,"A"              ,8),
-(101809        ,4          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"M"            ,"A"              ,8),
-(101809        ,5          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"M"            ,"A"              ,8),
-(101809        ,6          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"M"            ,"A"              ,8),
-(101809        ,7          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"M"            ,"A"              ,8),
-(101809        ,8          ,2024         ,5             ,1                   ,5                 ,6          ,6                       ,"M"            ,"A"              ,8)
+(103609        ,1          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(103609        ,2          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(103609        ,3          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(103609        ,4          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(103609        ,5          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(103609        ,6          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(103609        ,7          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(103609        ,8          ,2024         ,5             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8)
+;
+INSERT INTO RegistroMensual
+(IDPersonas    ,NumeroMes  ,NumeroAnio   ,NumeroAtrasos ,NumeroSalidaAntes   ,HorasFaltantes    ,HorasExtra ,HorasExtraOrdinarias    ,DecimoTercerS  ,DecimoCuartoS    ,NumeroHorasLaborables)VALUES
+(104509        ,1          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(104509        ,2          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(104509        ,3          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(104509        ,4          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(104509        ,5          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(104509        ,6          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(104509        ,7          ,2024         ,0             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8),
+(104509        ,8          ,2024         ,5             ,1                   ,2                 ,6          ,6                       ,"M"            ,"A"              ,8)
 ;
 
 

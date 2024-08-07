@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="780.0" fitWidth="1200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Resource/Image/Fondo.jpg" />
+            <Image url="@../Resource/Image/FondoUno.jpg" />
          </image>
       </ImageView>
       <BorderPane fx:id="anchorPanePrincipal" prefHeight="750.0" prefWidth="1200.0">
@@ -27,14 +27,14 @@
                         <Label fx:id="laberlFechasActual" layoutX="18.0" layoutY="18.0" prefHeight="17.0" prefWidth="526.0" />
                      </children>
                   </Pane>
-                  <Pane layoutX="37.0" layoutY="60.0" prefHeight="83.0" prefWidth="639.0" styleClass="panelTitulo" stylesheets="@../Resource/FondoUno.css">
+                  <Pane layoutX="37.0" layoutY="60.0" prefHeight="83.0" prefWidth="715.0" styleClass="panelTitulo" stylesheets="@../Resource/FondoUno.css">
                      <children>
-                        <Label alignment="BASELINE_CENTER" contentDisplay="TOP" layoutX="80.0" layoutY="-2.0" prefHeight="77.0" prefWidth="535.0" styleClass="textoUno" stylesheets="@../Resource/FondoUno.css" text="&lt;Secutiry Craft&gt;" textAlignment="CENTER" />
+                        <Label alignment="BASELINE_CENTER" contentDisplay="TOP" layoutX="80.0" layoutY="-2.0" prefHeight="77.0" prefWidth="615.0" styleClass="textoUno" stylesheets="@../Resource/FondoUno.css" text="&lt;Human Schedule&gt;" textAlignment="CENTER" />
                         <Button fx:id="botonInicio" layoutY="2.0" mnemonicParsing="false" onAction="#acBotonInicio" prefHeight="80.0" prefWidth="67.0" textAlignment="CENTER">
                            <graphic>
                               <ImageView fitHeight="70.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" scaleY="1.2" scaleZ="1.2">
                                  <image>
-                                    <Image url="@../Resource/Image/Logo.jpeg" />
+                                    <Image url="@../Resource/Image/LogoUno.jpg" />
                                  </image>
                               </ImageView>
                            </graphic>

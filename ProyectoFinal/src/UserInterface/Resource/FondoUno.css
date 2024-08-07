@@ -65,20 +65,20 @@
 }
 
 .cuadroprincipal {
-    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #3b86ff80, #36b9fb80);
-    -fx-border-color: #005b96;
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #9d3bff80, #fb36a980);
+    -fx-border-color: #480096;
     -fx-border-radius: 20;
     -fx-background-radius: 20;
 }
 /*titulo*/
 .textoUno{
-    -fx-text-fill: #4da1e1;
+    -fx-text-fill: #cc77e1;
     -fx-font-family: "Over There";
     -fx-font-size: 28px;
 }
 
 .panelTitulo{
-    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #34495eb0, #316893af);
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #45345eb0, #793193af);
     -fx-background-radius: 0 0 60 0;
 }
 
@@ -151,7 +151,7 @@
     -fx-background-color:   linear-gradient(#9377d6f9, #a289cec5),
                             radial-gradient(center 50% 75%, radius 100%, rgba(15, 125, 204, 0.5), rgba(255, 255, 255, 0));
     -fx-background-radius: 60;
-    -fx-font-family: "Gumi Font Symbols";
+    -fx-font-family: "Arial Narrow";
     -fx-font-size: 22px;
     -fx-text-fill: #fdfefe99;
 }
@@ -159,7 +159,7 @@
     -fx-background-color:   linear-gradient(#fffffff9, #ffffffc5),
                             radial-gradient(center 50% 75%, radius 100%, rgba(15, 125, 204, 0.5), rgba(255, 255, 255, 0));
     -fx-background-radius: 60;
-    -fx-font-family: "Gumi Font Symbols";
+    -fx-font-family: "Arial Narrow";
     -fx-font-size: 22px;
     -fx-text-fill: #1900ffd5;
 }
@@ -261,7 +261,7 @@
     -fx-background-radius: 60;
     -fx-font-family: "Lemon Shake Shake";
     -fx-font-size: 14px;
-    -fx-text-fill: #c8ff7599;
+    -fx-text-fill: #e1ff00f9;
 }
 .textFieldNormal:hover{
     -fx-background-color:   linear-gradient(#fffffff9, #85ff93c5),
@@ -341,8 +341,9 @@
 .combo-box {
     -fx-font-size: 14px; /* Tamaño de fuente */
     -fx-padding: 5px; /* Relleno interno */
-    -fx-background-color: #ffffff; /* Color de fondo */
+    -fx-background-color: #aea5b1; /* Color de fondo */
     -fx-background-radius: 5px; /* Radio de borde */
+    -fx-font-family: "Vanilla Cake";
     -fx-border-color: #a0a0a0; /* Color del borde */
     -fx-border-radius: 5px; /* Radio de borde */
     -fx-border-width: 1px; /* Ancho del borde */
@@ -352,7 +353,7 @@
 /* Estilo para el desplegable del ComboBox */
 .combo-box .list-view {
     -fx-font-size: 14px; /* Tamaño de fuente */
-    -fx-background-color: #ffffff; /* Color de fondo */
+    -fx-background-color: #edff2958; /* Color de fondo */
     -fx-background-radius: 5px; /* Radio de borde */
     -fx-border-color: #a0a0a0; /* Color del borde */
     -fx-border-radius: 5px; /* Radio de borde */
@@ -362,6 +363,7 @@
 /* Estilo para los elementos dentro del ComboBox */
 .combo-box .list-cell {
     -fx-padding: 5px; /* Relleno interno */
+    
 }
 
 /* Estilo cuando el ComboBox está desplegado */
