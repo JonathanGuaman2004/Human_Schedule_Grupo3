@@ -337,3 +337,43 @@
     -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #345e4db0, #333193af);
     -fx-background-radius: 20;
 }
+
+.combo-box {
+    -fx-font-size: 14px; /* Tamaño de fuente */
+    -fx-padding: 5px; /* Relleno interno */
+    -fx-background-color: #ffffff; /* Color de fondo */
+    -fx-background-radius: 5px; /* Radio de borde */
+    -fx-border-color: #a0a0a0; /* Color del borde */
+    -fx-border-radius: 5px; /* Radio de borde */
+    -fx-border-width: 1px; /* Ancho del borde */
+    -fx-pref-width: 200px; /* Ancho preferido */
+}
+
+/* Estilo para el desplegable del ComboBox */
+.combo-box .list-view {
+    -fx-font-size: 14px; /* Tamaño de fuente */
+    -fx-background-color: #ffffff; /* Color de fondo */
+    -fx-background-radius: 5px; /* Radio de borde */
+    -fx-border-color: #a0a0a0; /* Color del borde */
+    -fx-border-radius: 5px; /* Radio de borde */
+    -fx-border-width: 1px; /* Ancho del borde */
+}
+
+/* Estilo para los elementos dentro del ComboBox */
+.combo-box .list-cell {
+    -fx-padding: 5px; /* Relleno interno */
+}
+
+/* Estilo cuando el ComboBox está desplegado */
+.combo-box .arrow-button {
+    -fx-background-color: #f0f0f0; /* Color de fondo */
+    -fx-background-radius: 5px; /* Radio de borde */
+    -fx-border-color: #a0a0a0; /* Color del borde */
+    -fx-border-radius: 5px; /* Radio de borde */
+    -fx-border-width: 1px; /* Ancho del borde */
+}
+
+/* Estilo para el texto seleccionado dentro del ComboBox */
+.combo-box .text {
+    -fx-fill: #333333; /* Color del texto */
+}
