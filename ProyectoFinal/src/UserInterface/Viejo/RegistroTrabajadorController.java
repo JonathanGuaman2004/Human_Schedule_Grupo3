@@ -4,7 +4,6 @@
  */
 package UserInterface.Viejo;
 
-import BusinessLogic.RegistroEmpleadoBL;
 import DataAccess.DTO.RegistroEmpleado_DTO;
 import FrameWork.GroupThreeException;
 
@@ -15,6 +14,8 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+
+import Business.BusinessLogic.RegistroEmpleadoBL;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

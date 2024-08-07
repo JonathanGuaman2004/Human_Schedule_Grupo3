@@ -7,9 +7,9 @@ package UserInterface.Form;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import BusinessLogic.RegistroEmpleadoBL;
-import BusinessLogic.SistemaControlAccesoBL;
-import BusinessLogic.SistemaSeguimientoYAsistenciaBL;
+import Business.BusinessLogic.RegistroEmpleadoBL;
+import Business.BusinessLogic.SistemaControlAccesoBL;
+import Business.BusinessLogic.SistemaSeguimientoYAsistenciaBL;
 import DataAccess.DAO.SistemaSeguimientoYAsistencia_DAO;
 import DataAccess.DTO.RegistroEmpleado_DTO;
 import DataAccess.DTO.SistemaControlAcceso_DTO;

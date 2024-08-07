@@ -1,4 +1,4 @@
-package BusinessLogic;
+package Business.BusinessLogic;
 
 import DataAccess.DAO.SistemaSeguimientoYAsistencia_DAO;
 import DataAccess.DTO.SistemaSeguimientoYAsistencia_DTO;

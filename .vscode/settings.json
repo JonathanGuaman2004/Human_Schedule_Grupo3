@@ -1,0 +1,14 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "ProyectoFinal/lib/javafx.base.jar",
+        "ProyectoFinal/lib/javafx.controls.jar",
+        "ProyectoFinal/lib/javafx.fxml.jar",
+        "ProyectoFinal/lib/javafx.graphics.jar",
+        "ProyectoFinal/lib/javafx.media.jar",
+        "ProyectoFinal/lib/javafx.swing.jar",
+        "ProyectoFinal/lib/javafx.web.jar",
+        "ProyectoFinal/lib/javafx-swt.jar",
+        "ProyectoFinal/lib/sqlite-jdbc-3.40.0.0.jar"
+    ]
+}

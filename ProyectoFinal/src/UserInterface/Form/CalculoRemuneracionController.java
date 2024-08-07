@@ -11,8 +11,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.ResourceBundle;
 
-import BusinessLogic.RegistroEmpleadoBL;
-import BusinessLogic.SistemaControlAccesoBL;
+import Business.BusinessLogic.RegistroEmpleadoBL;
+import Business.BusinessLogic.SistemaControlAccesoBL;
 import DataAccess.DAO.SistemaControlAcceso_DAO;
 import DataAccess.DAO.SistemaSeguimientoYAsistencia_DAO;
 import DataAccess.DTO.RegistroEmpleado_DTO;

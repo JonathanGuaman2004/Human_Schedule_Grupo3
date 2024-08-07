@@ -1,4 +1,4 @@
-package BusinessLogic;
+package Business.BusinessLogic;
 
 import DataAccess.DAO.RegistroEmpleado_DAO;
 import DataAccess.DTO.RegistroEmpleado_DTO;
