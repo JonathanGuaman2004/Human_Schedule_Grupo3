@@ -15,7 +15,7 @@
             "name": "App",
             "request": "launch",
             "mainClass": "App",
-            "projectName": "ProyectoFinal_e0c5c6b",
+            "projectName": "ProyectoFinal_3bf2d589",
             "vmArgs": "--module-path \"C:\\Users\\jonat\\Documents\\LibreriaFX\\javafx-sdk-22.0.1\\lib\" --add-modules javafx.controls,javafx.fxml"
         }
     ]

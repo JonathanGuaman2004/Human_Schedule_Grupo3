@@ -1,14 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
+
 package UserInterface.Form;
 
-import FrameWork.Fecha;
 import FrameWork.GroupThreeException;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import DataAccess.DTO.SistemaSeguimientoYAsistencia_DTO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -50,8 +47,8 @@ public class VentanaMenuController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        Fecha fecha = new Fecha();
-        laberlFechasActual.setText(fecha.getNombreDiaDeLaSemana()+", "+fecha.getNumeroDia()+" de "+fecha.getNombreMes().toLowerCase()+" de "+fecha.getNumeroAno());
+        SistemaSeguimientoYAsistencia_DTO sis = new SistemaSeguimientoYAsistencia_DTO();
+        laberlFechasActual.setText(sis.getNombreDiaDeLaSemana()+", "+sis.getNumeroDia()+" de "+sis.getNombreMes().toLowerCase()+" de "+2024);
     }    
 
     @FXML

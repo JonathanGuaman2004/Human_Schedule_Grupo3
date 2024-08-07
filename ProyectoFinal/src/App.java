@@ -1,31 +1,25 @@
 
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
-
-import DataAccess.SQLiteDataHelper;
-import DataAccess.DAO.RegistroEmpleado_DAO;
-import DataAccess.DTO.RegistroEmpleado_DTO;
 import javafx.application.Application;
-import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
-import javafx.application.Application;
-import javafx.stage.Stage;
-
+/**
+ * Clase Java en donde se ejecutar►0nuestro programa
+ */
 public class App extends Application{
-    private double xOffset=0;
-    private double yOffset=0;
+    /**
+     * Método de Entrada Principal
+     * @param args
+     */
     public static void main(String[] args) {
         launch(args);
     }
     
+    /**
+     * Método de la Aplicacion JavaFx donde el ¨Stage¨ sera la ventana principal de la aplicacion
+     */
     @Override
     public void start(Stage stage)throws Exception{
         try {
