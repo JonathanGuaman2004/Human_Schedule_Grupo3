@@ -65,8 +65,8 @@ public class RegistroEntradaSalidaController implements Initializable {
 
     /**
      * Metodo para registrar tanto la entrada como la salida de una persona
-     * @param event: el evento espera a que el boton sea seleccionado
-     * @throws GroupThreeException: En caso de haber errores, se lanzará esta excepcion que indicará el error o el problema de su ejecucion
+     * @param event el evento espera a que el boton sea seleccionado
+     * @throws GroupThreeException En caso de haber errores, se lanzará esta excepcion que indicará el error o el problema de su ejecucion
      */
     @FXML
     private void acRegistrarEntrada(ActionEvent event) throws GroupThreeException {
@@ -112,7 +112,7 @@ public class RegistroEntradaSalidaController implements Initializable {
 
     /**
      * metodo para verificar si los datos ingresados al textfield es correcta
-     * @param cBarras: el dato que ingresa en el lecto de barras
+     * @param cBarras el dato que ingresa en el lecto de barras
      * @return: retoena un entero que indica si puede ingresar o no
      */
     private int verificarBarraUsuario(String cBarras){
@@ -134,7 +134,7 @@ public class RegistroEntradaSalidaController implements Initializable {
 
     /**
      * Metodo que verifica los datos ingresados al lector de barras
-     * @param codigoBarras: datos ingresados al lector de barras
+     * @param codigoBarras datos ingresados al lector de barras
      * @return: retorna un booleano que indica si puede proseguir o no con el programa
      */
     public boolean verficarBarra(TextField codigoBarras) {

@@ -49,7 +49,7 @@ public class VentanaMenuController implements Initializable {
 
     /**
      * evento para que se muestre la ventana de Vacio
-     * @param event: el evento espera a que el boton sea seleccionado
+     * @param event el evento espera a que el boton sea seleccionado
      */
     @FXML
     private void acBotonInicio(ActionEvent event) {
@@ -60,7 +60,7 @@ public class VentanaMenuController implements Initializable {
 
     /**
      * evento para que se muestre la ventana de RegistroTrabajador
-     * @param event: el evento espera a que el boton sea seleccionado
+     * @param event el evento espera a que el boton sea seleccionado
      */
     @FXML
     private void acBotonRegistro(ActionEvent event) {
@@ -77,7 +77,7 @@ public class VentanaMenuController implements Initializable {
 
     /**
      * evento para que se muestre la ventana de RegistroEntradaSalida
-     * @param event: el evento espera a que el boton sea seleccionado
+     * @param event el evento espera a que el boton sea seleccionado
      */
     @FXML
     private void acBotonIngresoSalida(ActionEvent event) {
@@ -94,7 +94,7 @@ public class VentanaMenuController implements Initializable {
 
     /**
      * evento para que se muestre la ventana de CalculoRemuneracion
-     * @param event: el evento espera a que el boton sea seleccionado
+     * @param event el evento espera a que el boton sea seleccionado
      */
     @FXML
     private void acBotonCalculoRemuneracion(ActionEvent event) {
@@ -111,7 +111,7 @@ public class VentanaMenuController implements Initializable {
 
     /**
      * evento para que se cierre el programa
-     * @param event: el evento espera a que el boton sea seleccionado
+     * @param event el evento espera a que el boton sea seleccionado
      */
     @FXML
     private void terminarAplicacion(ActionEvent event) {
@@ -120,8 +120,8 @@ public class VentanaMenuController implements Initializable {
     
     /**
      * Metodo para conectarse con las ventanas a abrir
-     * @param fileName: nombre del archivo de la ventana
-     * @return: retorna el nombre del pane del archivo
+     * @param fileName nombre del archivo de la ventana
+     * @return retorna el nombre del pane del archivo
      */
     public Pane getPage (String fileName){
         try {
